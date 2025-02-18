@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Atkinson Hyperlegible Mono", serif;
+    outline: none;
+    font-weight: 500;
+}
+body{
+    background: url("/images/background.png") no-repeat center center fixed;
+    background-size: cover;
+}
+p{
+    font-weight: 300;
+}
+.table{
+    background-color: #8d1294;
+    color: white;
+    width: 50vw;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 30vh auto 0;
+    opacity: 0.88;
+}
+.task-input{
+    border: none;
+    border-radius: 7px;
+    width: 100%;
+    height: 4vh;
+    padding-left: 10px;
+    margin-bottom: 1.5vh;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.description-input{
+   border: none;
+       border-radius: 7px;
+       width: 100%;
+       height: 6vh;
+       padding-left: 10px;
+       font-weight: 300;
+       margin-bottom: 1.5vh;
+       box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.task-button{
+    border: none;
+    border-radius: 7px;
+    width: 100%;
+    height: 4vh;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-size: 2vh;
+    font-weight: 800;
+    margin-bottom: 5vh;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.task-button:hover{
+    opacity: 0.8;
+}
+.task-button:active{
+    opacity: 0.5;
+}
+.task-list{
+    width: 100%;
+    list-style: none;
+}
+.task{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    padding-top: 1vh;
+    padding-right: 1.5vw;
+    padding-bottom: 0.6vh;
+    padding-left: 1.5vw;
+    border-radius: 7px;
+    margin-bottom: 1vh;
+    background-color: #FFF;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    cursor: pointer;
+}
+.task-buttons {
+    display: flex;
+    gap: 0.7vw;
+}
+.completed {
+    background-color: #d3d3d3; /* Cinza claro para indicar conclusão */
+    text-decoration: line-through; /* Risco no texto */
+    opacity: 0.7; /* Deixa o item mais "apagado" */
+}
+img{
+    height: 3vh;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.task:hover img{
+    opacity: 1;
+}

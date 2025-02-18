@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <title>To do List - igor.sza</title>
+</head>
+<body>
+    <div class="table">
+        <h1>To-Do List</h1>
+        <input class="task-input" placeholder="what task do you want to add?">
+        <br>
+        <input class="description-input" placeholder="description of task" alt="desc">
+        <br>
+        <button class="task-button" onclick="addTask()">add task</button>
+
+        <ul class="task-list">
+            <li th:each="task : ${tasks}" class="task">
+                <p th:text="${task.name}"></p>
+                <p th:text="${task.description}"></p>
+                <div class="task-buttons">
+                    <img src="images/check.png" alt="ok-in-task">
+                    <a th:href="@{/task/{id}(id=${task.id})}"><img src="/static/images/search.png" alt="view-task"></a>
+                    <a th:href="@{/task/delete/{id}(id=${task.id})}"><img src="/static/images/remove.png" alt="delete-task"></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
